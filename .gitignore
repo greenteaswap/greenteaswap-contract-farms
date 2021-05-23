@@ -1,0 +1,17 @@
+/node_modules/
+/.idea/
+/secrets.json
+/scripts/
+/migrations/
+/build/
+/client/
+/test/
+/accounts.json
+/truffle-config.js
+.env
+/flatten
+.secret
+yarn.lock
+package-lock.json
+.DS_Store
+/secrets

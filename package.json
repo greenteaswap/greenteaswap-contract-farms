@@ -1,0 +1,27 @@
+{
+  "name": "@greenteaswap/contracts",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "flatten": "sol-merger --export-plugin SPDXLicenseRemovePlugin \"./contracts/GreenTeaToken.sol\" ./flatten/ && sol-merger --export-plugin SPDXLicenseRemovePlugin \"./contracts/MasterChef.sol\" ./flatten/ && sol-merger --export-plugin SPDXLicenseRemovePlugin \"./contracts/SmartChef.sol\" ./flatten/ && sol-merger --export-plugin SPDXLicenseRemovePlugin \"./contracts/Timelock.sol\" ./flatten/",
+    "migrate:testnet": "truffle migrate --network bscTestnet --reset && yarn flatten",
+    "compile:testnet": "truffle compile --network bscTestnet",
+    "migrate:mainnet": "truffle migrate --network bscMainnet --reset && yarn flatten",
+    "compile:mainnet": "truffle compile --network bscMainnet"
+  },
+  "devDependencies": {
+    "@openzeppelin/contracts": "^3.1.0",
+    "@openzeppelin/contracts-upgradeable": "^3.4.0",
+    "@openzeppelin/test-helpers": "^0.5.10",
+    "@openzeppelin/truffle-upgrades": "^1.5.0",
+    "sol-merger": "^3.1.0",
+    "truffle-contract-size": "^2.0.1",
+    "truffle-hdwallet-provider": "^1.0.17",
+    "truffle-plugin-verify": "^0.5.4",
+    "web3": "^1.3.0"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "truffle": "^5.3.4"
+  }
+}
